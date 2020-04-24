@@ -17,7 +17,7 @@
 
 	<!-- Header -->
 	<header id="header">
-		<div class="logo"><a href="index.html">Porfolio <span>by Mohammad Hasnain</span></a></div>
+		<div class="logo"><a href="index.html">Portfolio <span>by Mohammad Hasnain</span></a></div>
 		<a href="#menu">Menu</a>
 	</header>
 
@@ -40,87 +40,238 @@
 			<div class="inner">
 				<header class="align-center">
 					<h1>Projects</h1>
-					<p>Here is a brief description of various projects I have worked on</p>
+					<i>
+						<h5>Here is a brief description of various projects I have worked on</h5>
+					</i>
 				</header>
+
+
 				<div class="flex flex-2">
 					<div style="margin-top:30px">
-						<h3>Emotionally Intelligent Virtual AI Companion</h3>
-						<h5>Jun 2019 – Present</h5>
-						<p align='justify'>
-							<ul>
-								<li> We are trying to achieve two goals simulataneouslu using this project
-								<li> One is to contribute towards AGI research and the other is to provide a companion
-									to people that could help people having mental illness
-								<li>The mental health issues of loneliness and depression are two rapidly growing
-									problems in society today
-								<li>There is an ever-increasing demand for solutions to help people suffering from these
-									mental health
 
-								<li>This solution aims to create artificial intelligence that
-									simulates a lot of the human processes of communication such as establishing
-									long-term relationships with the user, understanding the mood of the user during a
-									conversation and also detecting whether a user is depressed or lonely.
 
-								<li>Here we propose a system that accepts user input as text and/or voice
-								<li> Our system then processes the input to find the cues related to emotions and
-									factual topics
-								<li> We use a graph based data base such as Neo4j for persistent storage of user
-									personality and moving context
-								<li> The user personality is detected using various methods such as mayers briggs
-								<li>We are working on a generative model for open-ended questions and a retrieval-based
-									model for generating
-									factual answers related to the user from the context graphs and other sources.
 
-								<li>The system does not act as a therapist or a
-									counselor but rather attempts to present itself as a “companion” that can in future
-									offer the
-									user tools such as meditation to manage their feelings and emotion.
-							</ul>
+						<h3>Virtual AI Companion Using Mayer’s Briggs </h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>This system uses personality predicted by MBT using xgboost instead of
+										personality from persona chat dataset for giving a personality to the bot </li>
+									<li>the objective can be achieved by dividing the system into four parts - 1) The
+										input processor, 2) The personality detection subsystem, 3) The response
+										generation, 4) The output generator</li>
+									<li>Each input from the user would be first go through basic preprocessing such as
+										tokenization and converted to embeddings in the input processor. The input
+										processor would store the input to list of utterances. If the user sends the
+										input as speech signals, the speech would be converted into text and the other
+										steps remain the same</li>
+									<li>The personality detection subsystem would consist of a text classifier. The text
+										classifier would classify the text into various personalities using the Mayer's
+										Briggs [add a short description on what Mayer's Briggs is] The tokenized input
+										from the input processor would be fed to a Machine Learning model.</li>
+									<li>The response generation: This would use the personality detected by the
+										personality detector and prepend it to the list of utterances. This list of
+										utterances would be fed to a Deep Learning based response generation model, that
+										generates a stream of token to be processed by the output generator.</li>
+									<li>The output processor converts the tokens to English words. These words are
+										displayed in the chat window</li>
+
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/-convai2-using-mbt" class="button big scrolly">Github
+							code <span class="icon fa-github"></span></a>
+
 						</p>
+						<h3>Chart Analytics </h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>A software that could help you by summarizing an input graph </li>
+									<li>A CNN classifier to classify the input graph trained on FigureQA dataset. Text
+										detection is done using RCNN and text recognition using teserract. </li>
+									<li>The various components of the graphs such as bars and lines are extracted using
+										OpenCV. Using these components and scale from the text recognition is used to
+										get the actual values from the graph. </li>
+									<li>This data extracted can be served in the desired way such as tables or
+										summaries. </li>
+									<li>This Project helps gather insights from graphs generated by various automated
+										monitoring systems. This could save the time of analyst to create repetitive
+										reports </li>
+
+
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/Chart-to-summary" class="button big scrolly">Github code
+							<span class="icon fa-github"></span></a>
+						</p>
+
+
+
 						<h3>Cyberbot</h3>
-						<h5>Aug 2019–Oct 2019</h5>
-						<p align='justify'>
-							<li>A bot that answers Natural Language queries for a specific vulnerability given by user
-							</li>
-							<li>
-								Wrote code that does transfer learning on Bert for the Question Answering
-							</li>
-							<li>
-								Coded a finite state machine in python to manage states
-							</li>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>The chatbot helps user inform about various security threats</li>
+
+									<li>The list of all vulnerabilities is accessed through exploitdb commandline tool
+										by running commands using subprocess</li>
+
+									<li>The states of the bot is controlled using a finite automata</li>
+
+									<li>Process:</li>
+									<ol>
+										<li>User enters a natural language query.</li>
+										<li>The query is searched in exploitdb and related vulnerabilities are displayed
+										</li>
+										<li>The user selects a specific vulnerability.</li>
+										<li>The data of the vulnerability is scraped from CVE and the details stored
+										</li>
+										<li>A QA model is trained on the unstructured text data to answer natural
+											language questions</li>
+									</ol>
+
+
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/cyberbot" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
 						</p>
-						<div class="copyright">
-							<ul class="icons">
-								<li><a href="https://github.com/hasnain2808/cyberbot" class="icon fa-github"><span
-											class="label">Github</span></a>
-								</li>
-							</ul>
 
-						</div>
 
-						<h3>Chart Analytics</h3>
-						<h5>June 2019 – Nov 2019</h5>
-						<p align='justify'>
-							<li>Trained a custom CNN for classification of the chart</li>
-							<li>
-								Extracted Charts such as Bar Chart with their labels from FigureQa Dataset
-							</li>
-							<li>
-								Using Image Processing techniques to extract numerical information from the charts
-							</li>
+						<h3>Smart Home automation using segmented Image Processing
+						</h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>The idea is to save energy by controlling lights by detecting humans</li>
+									<li>The room is divided into quadrant and each quadrant is linked to a relay which controls electrical appliances in that specific quadrant</li>
+									<li>The relay is connected to an arduino and a esp8266 for http communication</li>
+									<li>The camera is connected to a raspberry pi 3b+ which acts as the brain of the system. The camera captures frames and places in the buffer</li>
+									<li>The python script picks a frame each time and divides it into quadrant. Human detection is run and the co-ordinates of humans are stored. The co-ordinates are processed to find the quadrant in which the human lies. </li>
+									<li>The arduino is sent a http signal via esp8266 to change the status of the electrical appliances only in those quadrants</li>
+									<li>OpenCV is used for image processing and Tensorflow for Human detection using SSD Mobilenet </li>
+
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/smart_home_automation_with_segmented_image_processing" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
 						</p>
-						<div class="copyright">
-							<ul class="icons">
-								<li><a href="https://github.com/hasnain2808/Chart-to-summary"
-										class="icon fa-github"><span class="label">Github</span></a>
-								</li>
-							</ul>
 
-						</div>
+
+						<h3>Virtual AI Companion Using graphs / MYK 
+
+						</h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>A companion that could establish long term relationships with the user.</li>
+									<li>Graph is used as the memory to store context for the chit-chat model and graph embeddings are used for the factual question answering</li>
+									<li>A lstm classifier is built to classify intent to factual and chit-chat </li>
+									<li>The input is processed using Stanford Core NLP for triplet extraction and coreference analysis and Spacy pipelines for other tasks such as tokenization, lemmatization, stemming, etc. The chit-chat model is trained using OpenAI gpt2 and using persona chat data. Our model ranks second on one metric and third on two other metrics. </li>
+									<li>The final product can be used at various locations such as customer service, sales and healthcare. The notable benefit being long term relationships </li>
+
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/transfer-learning-conv-ai" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
+						</p>
+
+						<h3>Image Classification
+
+						</h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>Images of four types such as Food, Attire and Decorations were provided.</li>
+									<li>The task was to classify the images using CNN</li>
+									<li>The initial a look at the dataset showed that the images are available in a folder and files having the names as links</li>
+									<li>The data set was loaded in memory using numpy and pandas and resized to size (64,64,3)</li>
+									<li>The data generator uses data augmentation which helps increase the size of the dataset.</li>
+									<li>The train set also includes labels of test images which was filtered out</li>
+									<li>A custom CNN is trained to classify the images</li>
+									
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/Image_Classification" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
+						</p>
+
+						<h3>Aspect oriented Sentiment analysis.
+						</h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>The data provided contained tweets and their sentiments for a specific entity. </li>
+									<li>The task is to find the entity related to a specific task.</li>
+									<li>Convert each of the input review and target entity to glove vectors</li>
+									<li>Then the train and validation set were prepared</li>
+									<li>The model designed has two inputs (one for the review and other for the entity)</li>
+									<li>After adding two bidirectional Lstm per input the values were concatened and followed by fully connected layer</li>
+									<li>The model is performing 80% accurate on the val set but is only outputting 2 to get that high level</li>
+										
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/entity_based_sentiment_analysis-using_two_input_model" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
+						</p>
+
+
+						<h3>Detect abnormality in 3d chest CT scan</h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>The 3d chest CT scans are in .tiff per slide</li>
+									<li>There are different number of slides per patient which were normalized to 128 per patient</li>
+									<li>They are used to create a 128*128*128 vector for each patient</li>
+									<li>The scans are then sent to unet model that gives 3d masks as the output</li>
+									
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/chest-scan-3d-abnormality-detection" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
+						</p>
+
+						<h3>Detect non overlapping nuclei
+						</h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>Reading input as numpy arrays</li>
+									<li>Image Augmentation using sheeres, rotations, transformations rotations.</li>
+									<li>Model was trained for image segmentation with the following callbacks:</li>
+									<ol><li>Checkpointing whenever the loss improved</li>
+										<li>Early stopping</li>
+									
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/overlapping_nuclei_detection" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
+						</p>
+
+
 
 						<h3>Pheme –Ai-Qa News Bot (Winner Unscript’19 Hackathon</h3>
 						<h5>Mar 2019</h5>
 						<p align='justify'>
+							<b>
 							<li>Pull news from various sources</li>
 							<li>
 								Stage them at a central server</li>
@@ -130,13 +281,18 @@
 								Classify according to categories</li>
 							<li>
 								Deliver to the end user according to requirements</li>
-						</p>
+							</b>
+							</p>
+
+
+
+
 
 						<h3>SERVER LOG MANAGEMENT
 						</h3>
 						<h5>Feb 2019 – Mar 2019</h5>
 						<p align='justify'>
-							<li>Smart India Hackathon Finalist
+							<b><li>Smart India Hackathon Finalist
 							</li>
 							<li>
 								The solution would collect logs from various sources and store it in a central location
@@ -163,7 +319,12 @@
 							<li>
 								Role: Leader of the team
 							</li>
+							</b>
 						</p>
+
+
+
+<!-- 
 						<h3>SMART HOME AUTOMATION USING IMAGE PROCESSING</h3>
 						<h5>Jul 2018 – Oct 2018</h5>
 						<p align='justify'>The objective of this project is to develop a smart IoT based light control
@@ -191,6 +352,10 @@
 								detecting changes in the position of the humans in the room.
 						</p>
 
+
+ -->
+
+						<!-- 
 						<h3>HAND SIGN DETECTION</h3>
 						<h5>Apr 2018 – May 2018</h5>
 						<p align='justify'>Hand sign image recognition using resnet50 model
@@ -214,9 +379,9 @@
 								</li>
 							</ul>
 
-						</div>
-						<p align='justify'>Generate dinosaur names using Character level modelling using Numpy pandas
-							from scratch</p>
+						</div> -->
+						<!-- <p align='justify'>Generate dinosaur names using Character level modelling using Numpy pandas
+							from scratch</p> -->
 					</div>
 
 				</div>
