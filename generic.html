@@ -49,6 +49,28 @@
 				<div class="flex flex-2">
 					<div style="margin-top:30px">
 
+
+						<h3>Online Test Application
+
+						</h3>
+						<!-- <h5>Jun 2019 – Present</h5> -->
+						<b>
+							<p align='justify'>
+								<ul>
+									<li>The application helps conduct online quiz.   
+									<li>It uses H2 database to store data.
+									<li>Command Runner is used to insert questions and their corresponding answers.
+									<li>The backend is made using Spring Boot and frontend is made using Angular.
+									
+
+								</ul>
+						</b>
+
+						<a href="https://github.com/hasnain2808/Online-Test-Application" class="button big scrolly">Github code <span
+								class="icon fa-github"></span></a>
+						</p>
+
+
 						<h3>Virtual AI Companion Using graphs / MYK 
 
 						</h3>
@@ -56,11 +78,13 @@
 						<b>
 							<p align='justify'>
 								<ul>
-									<li>A companion that could establish long term relationships with the user.</li>
-									<li>Graph is used as the memory to store context for the chit-chat model and graph embeddings are used for the factual question answering</li>
-									<li>A lstm classifier is built to classify intent to factual and chit-chat </li>
-									<li>The input is processed using Stanford Core NLP for triplet extraction and coreference analysis and Spacy pipelines for other tasks such as tokenization, lemmatization, stemming, etc. The chit-chat model is trained using OpenAI gpt2 and using persona chat data. Our model ranks second on one metric and third on two other metrics. </li>
-									<li>The final product can be used at various locations such as customer service, sales and healthcare. The notable benefit being long term relationships </li>
+									<li>This companion establishes long term relationships. This helps have 30%
+									better customer retention. Trained on AWS and deployed using docker 
+									<li>Trained a factual/ non-factual LSTM classifier which has accuracy of 99 %
+									<li>Trained an OpenAi GPT transformer that uses the history of the dialogue as
+									a context graph to generate non-factual output. It has a Perplexity of 18 and
+									f1 score of 18.4 which puts us second on the leaderboard
+									
 
 								</ul>
 						</b>
@@ -235,11 +259,11 @@
 						<b>
 							<p align='justify'>
 								<ul>
-									<li>The 3d chest CT scans are in .tiff per slide</li>
-									<li>There are different number of slides per patient which were normalized to 128 per patient</li>
-									<li>They are used to create a 128*128*128 vector for each patient</li>
-									<li>The scans are then sent to unet model that gives 3d masks as the output</li>
-									
+									<li>This project uses 3d image segmentation to find areas of abnormalities in
+									3d chest scans. This helps the medical professional to verify the area of
+									abnormality or reduces the area to look for the abnormalities 
+									<li>>Processed each training examples to have 20 slides (image channels) 
+									<li>Trained a 3d UNET model with a dice coefficient of 0.0019 using Keras 
 								</ul>
 						</b>
 
